@@ -1,0 +1,26 @@
+return {
+  'nvim-treesitter/nvim-treesitter',
+  build = ':TSUpdate',
+  event = { 'BufReadPost', 'BufNewFile' },
+  dependencies = {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    'nvim-treesitter/nvim-treesitter-context',
+    'HiPhish/rainbow-delimiters.nvim',
+    'windwp/nvim-ts-autotag',
+  },
+  opts = {
+    highlight = { enable = true },
+    indent = { enable = true },
+    autotag = { enable = true },
+    rainbow = { enable = true },
+    ensure_installed = {
+      "lua", "html", "css", "javascript", "typescript",
+      "tsx", "json", "markdown", "markdown_inline", "bash",
+      "c", "cpp", "python", "java", "go", "rust", "dockerfile", "graphql", "promql", "sql", "gitignore", "yaml"
+    },
+  },
+  config = function(_, opts)
+    require('nvim-treesitter.configs').setup(opts)
+  end,
+}
+
