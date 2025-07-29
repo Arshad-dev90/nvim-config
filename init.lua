@@ -26,4 +26,5 @@ require("lazy").setup({
 	require("plugins.gitsigns"),
 	require("plugins.lualine"),
 	require("plugins.nvim-tmux-navigator"),
+	require("plugins.prisma"),
 })

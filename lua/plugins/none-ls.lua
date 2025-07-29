@@ -16,6 +16,7 @@ return {
 				"shfmt",
 				"checkmake",
 				"clang_format",
+				"prisma",
 			},
 			automatic_installation = true,
 		})
